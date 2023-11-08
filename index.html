@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <title>Calculator</title>
+
+    <style>
+        body{
+            margin: 0;
+            background-color: #f5f5f5;
+            font-family: Arial, sans-serif;
+
+        }
+        section {
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;           
+        }
+        section .Calculator{
+            border: 2px solid #ccc;
+            border-radius: 10px;
+            width: 500px;
+            height: 700px;
+            padding: 20px;
+            background-color: #ffffff;
+            box-shadow: 0px 0px 15px 5px rgba(0,0,0,0.1);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        section .Calculator .input-display {
+            background-color: #eee;
+            width: 100%;
+            height: 80px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            padding-right: 10px;
+            padding-left: 10px;
+            font-size: 2em;
+            color: #333;
+            box-sizing: border-box;
+            justify-content: flex-start
+        }
+
+        section .Calculator .calculator-buttons{
+            width: 100%;
+            height: 90%;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            align-content: center;
+            
+            
+        }
+
+        section .Calculator .calculator-buttons button {
+            flex-basis: calc(25% - 10px);
+            margin: 5px;
+            box-sizing: border-box;
+            width:100px ;
+            height: 100px;
+            padding: 20px;
+            font-size: 1.5em;
+            border: none;
+            border-radius: 5px;
+            color: #fff;
+            cursor: pointer;
+        }
+
+        section .Calculator .calculator-buttons button:hover {
+            background-color: #444;
+            box-shadow: 0px 5px 15px rgba(0,0,0,0.3);
+        }
+
+        section .Calculator .calculator-buttons button:active {
+            transform: scale(0.9);
+        }
+
+        section .Calculator .calculator-buttons .number {
+            background-color: #007bff;
+        }
+
+        section .Calculator .calculator-buttons .operator {
+            background-color: #6c757d;
+        }
+
+        section .Calculator .calculator-buttons .equal {
+            background-color: #28a745;
+            flex-grow: 1;
+            grid-column: span 2;
+        }
+
+        section .Calculator .calculator-buttons .clear {
+            background-color: #dc3545;
+        }
+
+        section .Calculator .calculator-buttons .percent,
+        section .Calculator .calculator-buttons .plus-minus {
+            background-color: #ffc107;
+        }
+        .back-remove{
+            width: 50px;
+            height: 50px;
+            
+            align-self: flex-end;
+            background: none;
+            border: none;
+            
+            
+        }
+       
+        .material-symbols-outlined {
+            font-size: 40px;
+            font-variation-settings:
+            'FILL' 0,
+            'wght' 400,
+            'GRAD' 0,
+            'opsz' 94;
+            cursor: pointer;
+        }
+
+    </style>
+</head>
+<body>
+
+    <section>
+        <div class="Calculator">
+            <div class="input-display"></div>
+            
+            <button class="back-remove">
+                <span class="material-symbols-outlined">
+                    backspace
+                </span>
+            </button>
+            <div class="calculator-buttons">
+                <button class="operator"  value="AC">AC</button>
+                <button class="operator" value="change-sign">&plusmn;</button>
+                <button class="operator" data-op="%" value="percent">%</button>
+                <button class="operator" data-op="/" value="division">/</button>
+                <button class="number" value="7">7</button>
+                <button class="number" value="8">8</button>
+                <button class="number" value="9">9</button>
+                <button class="operator" data-op="*" value="multiple">*</button>
+                <button class="number" value="4">4</button>
+                <button class="number" value="5">5</button>
+                <button class="number" value="6">6</button>
+                <button class="operator" data-op="-" value="minus">-</button>
+                <button class="number" value="1">1</button>
+                <button class="number" value="2">2</button>
+                <button class="number" value="3">3</button>
+                <button class="operator" data-op="+" value="plus">+</button>
+                <button class="number" value="0" >0</button>
+                <button class="number" value=".">.</button>
+                <button class="operator equal" data-op="=" value="equal" >=</button>
+
+            </div>
+        </div>
+    </section>
+    
+
+    <script src="./calculatorLg.js">
+
+    </script>
+</body>
+</html>
