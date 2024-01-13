@@ -127,6 +127,21 @@
             cursor: pointer;
         }
 
+        section .Calculator {
+    max-width: 90vw; /* Set a max-width that scales with the viewport width */
+    height: auto; /* Let the height grow with content */
+    padding: 5%; /* Use percentage for padding to be responsive */
+    /* Other styles remain the same */
+}
+
+section .Calculator .calculator-buttons button {
+    flex: 1 0 20%; /* Allow buttons to grow and take equal space, with margin considered */
+    margin: 1%; /* Use relative units for margins */
+    padding: 10px; /* Fixed padding or use relative units */
+    /* Other styles remain the same */
+}
+
+
     </style>
 </head>
 <body>
